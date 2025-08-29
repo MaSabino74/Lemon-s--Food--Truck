@@ -25,7 +25,7 @@ body {
 
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('./assets/img/hero-bg.jpg') no-repeat center center;
+        url('./img/Hero-Lemons.webp') no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 100vh;

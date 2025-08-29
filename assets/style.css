@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --primary-color: #f8c471;
+    --secondary-color: #e74c3c;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --success-color: #27ae60;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--secondary-color), #34495e);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('./assets/img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+/*ver cardápio*/
+.btn-primary {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.burger-card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.burger-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.burger-image {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.burger-card:hover .burger-image {
+    transform: scale(1.05);
+}
+
+
+.about-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Estilos para o rodapé */
+.bg-dark {
+  background-color: #343a40; /* Cor de fundo escura, você pode ajustar */
+}
+
+.text-white {
+  color: #fff; /* Cor do texto branca */
+}
+
+/* Container do footer com Flexbox */
+footer {
+  display: flex;
+  justify-content: space-between; /* Distribui o espaço entre os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  padding: 1.5rem 1rem; /* Espaçamento interno */
+}
+
+/* Container de informações da empresa */
+.container {
+  flex: 1; /* Permite que ocupe o espaço disponível */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Ícones das redes sociais */
+.social-icons {
+  flex: 1; /* Permite que ocupe o espaço disponível */
+  text-align: center; /* Alinha os ícones ao centro */
+}
+
+.social-icons a {
+  margin: 0 0.5rem; /* Adiciona espaçamento entre os ícones */
+  transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+.social-icons a:hover {
+  color: #c9c9c9; /* Cor mais clara ao passar o mouse */
+}
+
+/* Botão de voltar ao topo */
+.topo {
+  flex: 1; /* Permite que ocupe o espaço disponível */
+  text-align: right; /* Alinha o botão à direita */
+}

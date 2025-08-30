@@ -40,6 +40,7 @@ body {
     padding: 12px 30px;
     font-weight: 600;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -53,17 +54,20 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   overflow: hidden;
+  
 }
 
 .burger-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    
 }
 
 .burger-image {
     height: 200px;
     object-fit: cover;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .burger-card:hover .burger-image {

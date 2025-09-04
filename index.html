@@ -21,8 +21,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="robots" content="index, follow">
+     <style>
+    /* Ajusta o espaçamento para não "cortar" o topo */
+    body {
+      margin-top: 50px; /* altura da barrinha */
+    }
+    #status-funcionamento {
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      color: #fff;
+      font-size: 1.1rem;
+      position: fixed;
+      top: 18px;
+      left: 500px;
+      width: 30%;
+      z-index: 1050;
+    }
+  </style>
 </head>
-
+ <div id="status-funcionamento" class="text-center fw-bold py-2"></div>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -48,6 +66,7 @@
             </div>
         </div>
     </nav>
+    
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
@@ -230,7 +249,32 @@
             <a href="#home" class="text-white"><i class="fa-solid fa-arrow-up-from-bracket"></i>
         </div>
     </footer>
-    
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function verificarFuncionamento() {
+      const agora = new Date();
+      const dia = agora.getDay(); // 0=Dom, 1=Seg, ..., 6=Sáb
+      const hora = agora.getHours();
+
+      // Horário de funcionamento: terça a domingo, 18h - 23h
+      const abre = 18;
+      const fecha = 23;
+
+      const aberto = ((dia >= 2 && dia <= 6) || dia === 0) && (hora >= abre && hora < fecha);
+
+      const status = document.getElementById("status-funcionamento");
+
+      if (aberto) {
+        status.style.backgroundColor = "#28a745"; // Verde
+        status.innerHTML = "✅ <strong>ABERTO</strong>! Hoje até às 23h.";
+      } else {
+        status.style.backgroundColor = "#dc3545"; // Vermelho
+        status.innerHTML = "❌ <strong>FECHADOS</strong>. Funcionamos de terça a domingo, das 18h às 23h.";
+      }
+    }
+
+    verificarFuncionamento();
+  </script>
 
 </html>
 </body>
